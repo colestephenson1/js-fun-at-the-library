@@ -23,19 +23,26 @@ function saveReview(reviews, bookRevs) {
 };
 
 // calculatePageCount
-function calculatePageCount(bookTitle, bookPageCount) {
+function calculatePageCount(bookTitle) {
   var bookPages = bookTitle.length * 20
 return bookPages
 };
 
-writeBook
-function writeBook(bookTitle, bookCharacter, pageCount, genre) {
+//writeBook
+function writeBook(bookTitle, bookCharacter, genre) {
   return {
     title: bookTitle,
     mainCharacter: bookCharacter,
-    pageCount: pageCount,
+    pageCount: calculatePageCount(bookTitle),
     genre: genre
   };
+};
+
+//editBook
+
+function editBook(bookTitle) {
+  bookTitle.pageCount = bookTitle.pageCount * .75
+return bookTitle.pageCount
 };
 
 
@@ -45,5 +52,5 @@ module.exports = {
   saveReview,
   calculatePageCount,
   writeBook,
-  // editBook
+  editBook
 }
