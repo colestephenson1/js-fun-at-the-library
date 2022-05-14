@@ -26,7 +26,7 @@ return `${fantasyShelf[0].title}, ${fantasyShelf[1].title}, ${fantasyShelf[2].ti
 //searchShelf
 
 function searchShelf(shelf, name) {
-  for (i = shelf.length - 1; i >= 0; i--) {
+  for (i = shelf.length - 1; i >= 0; i--) { // I did this because an increment loop didnt pass, so I decided to have it check from the last position backward and it worked. IDK
   if (shelf[i].title === name) {
 return true;
 } else {
