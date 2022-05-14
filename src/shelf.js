@@ -26,7 +26,7 @@ return `${fantasyShelf[0].title}, ${fantasyShelf[1].title}, ${fantasyShelf[2].ti
 //searchShelf
 
 function searchShelf(shelf, name) {
-  for (i = 1; i < shelf.length; i--) {
+  for (i = shelf.length - 1; i >= 0; i--) {
   if (shelf[i].title === name) {
 return true;
 } else {
