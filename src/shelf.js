@@ -20,7 +20,10 @@ return shelf.splice(i, 1)
 //listTitles
 
 function listTitles(fantasyShelf) {
-return `${fantasyShelf[0].title}, ${fantasyShelf[1].title}, ${fantasyShelf[2].title}`
+  var titles = []
+for (i = 0; i < fantasyShelf.length; i++) {
+titles.push(fantasyShelf[i].title)
+} return titles.join(', ')
 };
 
 //searchShelf
